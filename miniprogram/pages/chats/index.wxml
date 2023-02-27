@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container1">
+	<!-- <view class="res-item">
+		<view class="res-profile">chat</view>
+		<view class="res-con">您好</view>
+	</view> -->
+	<view class="res-item" wx:for="{{res}}" wx:key="index">
+		<block wx:if="{{item.type === 'res'}}">
+			<view class="res-profile">chat</view>
+			<rich-text class="res-con" nodes="{{item.text}}" style="word-break:break-all;"></rich-text>
+		</block>
+		<block wx:else>
+			<view class="req-con">{{item.text}}</view>
+		</block>
+	</view>
+
+	<view class="input-sec">
+		<input class="input-area" model:value="{{ques}}" placeholder="请输入问题"></input>
+		
+	</view>
+	<view class="btn-wrap">
+		<button class="btn-input" bind:tap="sendReq">发送</button>
+		<button class="btn-input reset" bind:tap="resetReq">清空</button>
+		<button class="btn-input interface" bind:tap="changeVersion">接口版本(v{{version}})</button>
+	</view>
+	
+		
+</view>
