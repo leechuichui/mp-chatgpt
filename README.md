@@ -22,9 +22,12 @@
 
 ### chats2
 
-用的代理，调用官网gpt3.5接口，需要accessToken，accessToken获取地址
+- 用的代理，调用官网gpt3.5接口，需要accessToken，accessToken获取地址
 https://chat.openai.com/api/auth/session
 
+- 官网用的EventSource，小程序不支持EventSource，只能接口一次性返回后截取答案
+
+- 代理限制 50Q/min
 
 
 
