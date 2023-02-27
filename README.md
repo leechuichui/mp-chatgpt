@@ -1,12 +1,30 @@
 # chatgpt 小程序demo
 
-小程序使用云开发，官网api
+![RUNOOB 图标](demo.png)
 
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
+## 使用前须知
 
-## 参考文档
+目前微信机器人，各种 ChatGPT 第三方服务，都是使用 gpt3 API，而官网 chat.openai.com 上的 ChatGPT 则是 gpt3.5。第三方使用低版本的接口来对 OpenAI 发起请求，返回聊天数据，所以会感觉对话质量不如直接使用 ChatGPT 官网。
 
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
+
+- 该项目使用小程序+云开发开发
+- 需要apikey，需要首先注册openapi账号
+- 同时支持官网api和gpt3 api
+
+
+## api说明
+
+### chats1
+
+用的官方api，需要api key,答案质量不如chats2
+
+### chats2
+
+用的代理，调用官网gpt3.5接口，需要accessToken，accessToken获取地址
+https://chat.openai.com/api/auth/session
+
+
+
+
+
 
